@@ -4,13 +4,13 @@
 
 我们先来看张图:
 
-![](D:\my_picturelib\rbac\1.png)
+![](https://github.com/Tigercoll/my_picturelib/raw/master/rbac/1.png)
 
 从上图我们可以看出，ACL是用户和权限直接关系的，RBAC则是通过角色间接关联用户和权限的。所以角色是RBAC系统的一个重要属性
 
 我们要实现的功能就是1,用户管理,2,角色管理,3权限管理.
 
-![](D:\my_picturelib\rbac\2.png)
+![](https://github.com/Tigercoll/my_picturelib/raw/master/rbac/2.png)
 
 ### 设计表
 
@@ -126,7 +126,6 @@ class RbacMiddleware(MiddlewareMixin):
 源码已放到[github](https://github.com/Tigercoll/rbac)上
 
 欢迎各位指教
-
 
 
 

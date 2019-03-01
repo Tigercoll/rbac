@@ -111,7 +111,7 @@ class Permissions(object):
     def add(self):
         return 1 in self.actions
     def delete(self):
-        return 2in self.actions
+        return 2 in self.actions
     def update(self):
         return 3 in self.actions
     def select(self):
@@ -290,5 +290,5 @@ def get_menu_list(request):
 
 ![](https://github.com/Tigercoll/my_picturelib/raw/master/rbac/3.gif)
 
-代码已上传至github
+代码已上传至[github](https://github.com/Tigercoll/rbac/tree/rbac-pro)
 

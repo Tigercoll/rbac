@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="db" uuid="800281ac-7b55-4c28-8b07-b704367dbeec">
+    <data-source name="Django default" uuid="9d7e2915-87e7-4651-8b6d-1a1929d4aa40">
       <database-info product="SQLite" version="3.25.1" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.25.1">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-      <introspection-schemas>*:*</introspection-schemas>
+      <auth-required>false</auth-required>
     </data-source>
   </component>
 </project>

@@ -20,6 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('user/add/',views.useradd),
     path('login/',views.login),
-
     path('user/',views.user),
+    path('roles/',views.roles),
+    path('permission/',views.permission),
 ]

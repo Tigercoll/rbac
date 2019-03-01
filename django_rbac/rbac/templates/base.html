@@ -1,0 +1,94 @@
+{% load get_menus_tag %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        .header {
+            width: 100%;
+            height: 50px;
+            background-color: #101010;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .row-left {
+            width: 30%;
+            height: 100%;
+            position: fixed;
+            top: 50px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            overflow: auto;
+        }
+
+        .row-rigth {
+            width: 70%;
+            height: auto;
+            position: fixed;
+            top: 50px;
+            bottom: 0;
+            right: 0;
+            overflow: auto;
+
+        }
+
+        .menu {
+            margin-top: 20px;
+        }
+
+        .table-list {
+            margin-top: 20px;
+            margin-left: 50px;
+            margin-bottom: 50px;
+            margin-right: 50px;
+        }
+
+        .menu-item {
+            width: 70%;
+            margin-left: 30px;
+        }
+    </style>
+
+</head>
+<body>
+<div class="header">
+
+</div>
+<div class="container">
+    <div class="row-left">
+        <div class="menu">
+            <div class="list-group">
+                {% get_menu_list request as menus %}
+                {% for menu in menus %}
+                    <a href="{{ menu.1 }}" class="list-group-item menu-item">{{ menu.0 }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% block index %}
+    {% endblock %}
+    <div class="footer">
+    </div>
+    <script>
+        $('.menu-item').each(function () {
+           if (window.location.pathname===$(this).attr('href')){
+              $(this).addClass('active')
+           }
+        })
+    </script>
+</div>
+</body>
+</html>

@@ -31,6 +31,7 @@ class RbacMiddleware(MiddlewareMixin):
                 url = '^%s$' % url
                 ret = re.match(url, url_path)
                 if ret:
+                    # 将动作加入request用于判断用户有没有这个操作权限
                     request.actions = permission['actions']
                     return None
         return HttpResponse('没有权限')

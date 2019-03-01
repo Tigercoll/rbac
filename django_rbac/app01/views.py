@@ -6,7 +6,9 @@ import re
 
 from rbac.service.register_rbac import rbac_login
 
+# 新增一个类 用于判断用户是否有这个操作权限
 class Permissions(object):
+    #  action_list = [(1,'add'),(2,'delete'),(3,'update'),(4,'select')]
     def __init__(self,actions):
         self.actions=actions
     def add(self):

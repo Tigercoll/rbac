@@ -6,3 +6,4 @@ from .models import *
 admin.site.register(User)
 admin.site.register(Roles)
 admin.site.register(Permission)
+admin.site.register(PermissionGroup)

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block index %}
+    <div class="row-rigth">
+        <div class="table-list">
+            <div class="panel panel-primary">
+                <!-- Default panel contents -->
+                <div class="panel-heading">用户列表</div>
+                <div class="panel-body">
+                    {% if permission.add %}
+                    <a href="/user/add/"><div class="btn btn-primary">添加用户</div></a>
+                    {% endif %}
+
+                    <!-- Table -->
+                    <table class="table table-bordered">
+
+                        <tbody>
+                        {% for user in get_list %}
+                        <tr>
+                            <th scope="row">{{ forloop.counter }}</th>
+                            <td>{{ user.username }}</td>
+                            <td>{{ user.password }}</td>
+                            <td>
+                                {% if permission.update %}
+                                <a href="/user/edit/{{ user.pk }}"><div class="btn btn-warning">修改</div></a>
+
+                                {% endif %}
+                            {% if permission.delete %}
+                            <a href="/user/delete/{{ user.pk }}"><div class="btn btn-danger">删除</div></a>
+                            {% endif %}
+                                  </td>
+                        </tr>
+                        {% endfor %}
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
